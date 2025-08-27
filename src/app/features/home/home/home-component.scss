@@ -1,0 +1,56 @@
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  scroll-behavior: smooth;
+
+  // Anima al entrar en vista si quieres con GSAP
+}
+
+.projects-section {
+  overflow: hidden;
+
+  .projects-scroll {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    // Personaliza scrollbar si quieres
+  }
+}
+
+.skills-section{
+  min-height: 85vh;
+}
+
+button.floating {
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.3s ease;
+  z-index: 100;
+
+  &:hover {
+    background-color: rgba(0, 188, 212, 0.1);
+    transform: scale(1.05);
+  }
+}
+
+button.floating.show {
+  opacity: 1;
+}

@@ -1,0 +1,22 @@
+<section class="projects-container">
+  <h2>Proyectos</h2>
+
+  <div class="category-buttons">
+    <button class="category-btn" [class.active]="activeCategory() === 'web'" (click)="setCategory('web')">
+      Web / Apps
+    </button>
+    <button class="category-btn" [class.active]="activeCategory() === 'games'" (click)="setCategory('games')">
+      Videojuegos
+    </button>
+  </div>
+
+  <div *ngIf="showGrid()" #projectsGrid class="projects-grid fade-grid">
+  <app-project-card
+    *ngFor="let project of activeProjects"
+    [project]="project"
+    [isWebApp]="project.isWebApp"
+    #cardRef>
+  </app-project-card>
+</div>
+
+</section>

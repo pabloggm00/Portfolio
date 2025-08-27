@@ -1,0 +1,43 @@
+<div #aboutContainer class="aboutme-container">
+    <img src="profile/profile3.jpg" alt="Pablo Gonzalez" class="profile-pic" />
+
+    <h1>¡Hola! Soy <span class="name">Pablo González</span></h1>
+    <h2>Desarrollador Frontend</h2>
+
+    <div class="about-texts">
+        <p>
+            Soy un desarrollador web con especial interés en el frontend, aunque también puedo trabajar como fullstack o
+            backend si el proyecto lo requiere.
+        </p>
+
+        <p>
+            Comencé mi camino en el desarrollo con el grado superior de Aplicaciones Multiplataforma, lo que me dio una
+            base sólida en programación. Más adelante estudié el grado superior de Animación 3D y el Máster de
+            Desarrollo de Videojuegos, aunque actualmente mi enfoque principal es el desarrollo web.
+        </p>
+
+        <p>
+            Soy proactivo, comprometido y orientado al trabajo en equipo. Siempre busco aprender y crecer
+            profesionalmente, y me entusiasma la idea de contribuir a proyectos innovadores.
+        </p>
+
+        <p>
+            ¡No dudes en contactarme si tienes alguna duda!
+        </p>
+    </div>
+
+    <div class="buttons">
+        <a [href]="cvUrl" download class="btn primary-btn">Descargar CV</a>
+        <button (click)="openContactModal()" class="btn secondary-btn">Contáctame</button>
+    </div>
+
+    <div class="social-buttons">
+        <a [href]="githubUrl" target="_blank" class="social-btn github">
+            <img src="icons/for_projects/github.svg" />
+        </a>
+        <a [href]="linkedinUrl" target="_blank" class="social-btn linkedin">in</a>
+    </div>
+
+    <app-contact-modal *ngIf="showContactModal()" (close)="closeContactModal()">
+    </app-contact-modal>
+</div>

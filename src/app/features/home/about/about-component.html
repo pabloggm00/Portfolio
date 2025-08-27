@@ -1,0 +1,21 @@
+<div #aboutContainer class="about-container">
+  <img src="profile/profile2.webp" alt="Pablo Gonzalez" class="profile-pic" />
+  
+  <h1>¡Hola, soy <a [routerLink]="['/aboutme']"><span class="name">Pablo González</span></a>!</h1>
+  <h2>Desarrollador Frontend</h2>
+  
+  <p class="about-text">
+    Soy un programador enfocado en desarrollo web y aplicaciones.<br>
+    La creación de videojuegos es un hobby para mí.
+  </p>
+
+  <div class="buttons">
+    <a [href]="cvUrl" download class="btn primary-btn">Descargar CV</a>
+    <button (click)="openContact()" #contactBtn class="btn secondary-btn">Contáctame</button>
+  </div>
+
+  <div class="social-buttons">
+    <a [href]="githubUrl" target="_blank" class="social-btn github"><img src="icons/for_projects/github.svg"></a>
+    <a [href]="linkedinUrl" target="_blank" class="social-btn linkedin">in</a>
+  </div>
+</div>

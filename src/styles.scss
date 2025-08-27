@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // --bg-color: #03132b;
+  --surface-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --accent-color: #00bcd4;
+  --hover-color: rgba(255, 255, 255, 0.05);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,
+      #0a0f25, // azul muy oscuro
+      #0f163d, // azul profundo
+      #2b0d3f, // morado oscuro
+      #2c073a // morado profundo casi negro
+    );
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+section {
+  padding: 2rem 2rem;
+}
+
+/* Para Chrome, Brave, Edge y Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15); // color claro y elegante
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* "thin" o "auto" o "none" */
+}
+

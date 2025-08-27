@@ -1,0 +1,211 @@
+.aboutme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 5rem;
+
+    .profile-pic {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+
+        .name {
+            color: #00bcd4;
+        }
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: #eba4ff;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+
+    .about-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: #ddd;
+        margin-bottom: 3rem;
+        line-height: 1.8;
+        max-width: 50%;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 35px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+
+            &.primary-btn {
+                background-color: #00bcd4;
+                color: #fff;
+
+                &:hover {
+                    background-color: #00a1b8;
+                }
+            }
+
+            &.secondary-btn {
+                background-color: transparent;
+                border: 2px solid #00bcd4;
+                color: #00bcd4;
+
+                &:hover {
+                    background-color: rgba(0, 188, 212, 0.1);
+                }
+            }
+        }
+    }
+
+    .social-buttons {
+        display: flex;
+        gap: 1rem;
+
+        .social-btn {
+            width: 45px; // iconos más grandes
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            img {
+                width: 28px;
+                height: 28px;
+                object-fit: contain;
+            }
+
+            &.linkedin {
+                background-color: #0077b5;
+                color: #fff;
+            }
+
+            &.github {
+                background-color: #fff;
+                filter: brightness(1) invert(1);
+            }
+        }
+    }
+
+    // Tablets
+    @media (max-width: 1024px) {
+   
+
+        .profile-pic {
+            width: 300px;
+            height: 300px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .about-texts {
+            max-width: 70%;
+            font-size: 1.1rem;
+        }
+
+        .buttons .btn {
+            font-size: 1rem;
+            padding: 0.7rem 1.8rem;
+        }
+
+        .social-buttons .social-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 0.9rem;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    // Móviles
+    @media (max-width: 700px) {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        .about-texts {
+            max-width: 90%;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            flex-direction: column;
+            gap: 1rem;
+
+            .btn {
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        .social-buttons {
+            gap: 0.5rem;
+
+            .social-btn {
+                width: 35px;
+                height: 35px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
