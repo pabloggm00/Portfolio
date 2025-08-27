@@ -7,8 +7,4 @@ export const routes: Routes = [
     { path: 'aboutme', component: AboutMeComponent}
 ];
 
-const routerOptions: ExtraOptions = {
-  anchorScrolling: 'enabled', // habilita scroll a fragmentos
-  scrollOffset: [0, 80],      // opcional: ajusta offset si tienes navbar fijo
-  scrollPositionRestoration: 'enabled' // opcional: mantiene scroll al volver
-};
+

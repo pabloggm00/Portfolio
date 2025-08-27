@@ -4,26 +4,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  scroll-behavior: smooth;
-
-  // Anima al entrar en vista si quieres con GSAP
 }
 
-.projects-section {
-  overflow: hidden;
-
-  .projects-scroll {
-    max-height: 70vh;
-    overflow-y: auto;
-    padding-right: 10px;
-
-    // Personaliza scrollbar si quieres
-  }
-}
-
-.skills-section{
-  min-height: 85vh;
-}
 
 button.floating {
   padding: 0.6rem 1.5rem;
