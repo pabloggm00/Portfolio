@@ -48,8 +48,9 @@ export class ProjectsComponent {
 
   webApps = signal<Project[]>([
     {
-      title: 'Portfolio', description: 'Información de mi persona',
+      title: 'Portfolio', description: 'Mi presentación en página web hecha con Angular 20',
       image: 'screenshots/001_project.webp', techs: [TECHS['angular'], TECHS['typescript'], TECHS['html'], TECHS['scss']],
+      icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/Portfolio', iconSrc: 'icons/for_projects/github.svg' }],
       isWebApp: true
     },
     {
