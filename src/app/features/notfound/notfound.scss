@@ -1,0 +1,29 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  text-align: center;
+  padding: 2rem;
+
+  .container {
+    max-width: 600px;
+
+    h1 {
+      font-size: 8rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+    }
+
+    p:last-child {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+  }
+}
