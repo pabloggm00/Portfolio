@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { Navbar } from "./layout/navbar/navbar";
 
 @Component({
@@ -10,4 +10,11 @@ import { Navbar } from "./layout/navbar/navbar";
 })
 export class App {
   protected readonly title = signal('portfolio');
+
+  constructor(private router: Router) {}
+
+  get showNavbar(): boolean {
+    const hiddenRoutes = ['/privacy-policy'];
+    return !hiddenRoutes.includes(this.router.url);
+  }
 }
