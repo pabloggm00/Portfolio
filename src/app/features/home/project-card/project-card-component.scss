@@ -1,23 +1,16 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   background-color: #1e1e1e;
   border-radius: 1rem;
   padding: 1rem;
   width: 400px;
-  height: 430px;
+  height: 430px; // altura fija para todas
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &.videojuego {
-    height: 405px;
-  }
-
-  &.webapp {
-    height: 430px;
-  }
+  overflow: hidden;
 
   &:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -25,30 +18,39 @@
 
   .project-img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 0.5rem;
     margin-bottom: 0.7rem;
+    flex-shrink: 0;
   }
 
   .project-content {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-grow: 1;
+    justify-content: flex-start;
+    overflow: hidden;
   }
 
   h3 {
-    margin: 0.5rem 0;
     color: #00bcd4;
-    min-height: 2rem;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+    min-height: 2.4rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem); 
     color: #ccc;
     margin-bottom: 0.7rem;
-    min-height: 3rem;
+    min-height: 3rem; 
+    line-height: 1.2;
+    -webkit-box-orient: vertical;
   }
 
   .project-techs {
@@ -58,6 +60,7 @@
     gap: 0.5rem;
     margin-bottom: 0.7rem;
     min-height: 2rem;
+    flex-shrink: 0;
 
     .tech-pill {
       padding: 0.3rem 0.7rem;
@@ -65,55 +68,56 @@
       font-size: 0.75rem;
       font-weight: 500;
       color: #fff;
-      transition: transform 0.2s ease;
       user-select: none;
-
     }
   }
 
-  .project-icons {
+  .project-footer {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.7rem;
+    align-items: center;
+    flex-shrink: 0;
     min-height: 3rem;
+    margin-top: auto;
 
-    .icon-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .project-icons {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: 8px;
 
-      img.project-icon-img {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
-        filter: brightness(0) invert(1);
-        opacity: 0.8;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+      .icon-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
-        &:hover {
-          transform: scale(1.15);
-          opacity: 1;
+        img.project-icon-img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+          filter: brightness(0) invert(1);
+          opacity: 0.8;
+          transition: transform 0.2s ease, opacity 0.2s ease;
+
+          &:hover {
+            transform: scale(1.15);
+            opacity: 1;
+          }
         }
       }
     }
-  }
 
-  .project-state {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #fff;
-    transition: transform 0.2s ease;
-    user-select: none;
-
+    .project-state {
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fff;
+      user-select: none;
+    }
   }
 }
-
 
 @media (max-width: 1024px) {
   .project-card {
@@ -137,14 +141,11 @@
 }
 
 @media (max-width: 480px) {
-
   .project-card {
     width: 250px;
     height: auto;
-    flex-direction: column;
 
     .project-img {
-      width: 100%;
       height: 100px;
     }
 
@@ -152,22 +153,17 @@
       justify-content: flex-start;
     }
 
+    .project-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
     .project-techs {
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 0.7rem;
-    }
-
-    .project-icons {
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 0.2rem;
-    }
-
-    .project-state {
-      position: relative; 
-      right: auto;
-      bottom: auto;
     }
   }
 }

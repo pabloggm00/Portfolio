@@ -1,4 +1,4 @@
-<div class="project-card"  [ngClass]="isWebApp ? 'webapp' : 'videojuego'">
+<div class="project-card" [ngClass]="isWebApp ? 'webapp' : 'videojuego'">
   <img [src]="project.image" [alt]="project.title" class="project-img" />
 
   <div class="project-content">
@@ -10,17 +10,16 @@
         {{ tech.name }}
       </span>
     </div>
+    <div class="project-footer">
+      <div class="project-icons" *ngIf="project.icons?.length">
+        <a *ngFor="let icon of project.icons" [href]="icon.url" target="_blank" rel="noopener noreferrer"
+          class="icon-link" [title]="icon.name">
+          <img [src]="icon.iconSrc" [alt]="icon.name" class="project-icon-img" />
+        </a>
+      </div>
 
-    <div class="project-icons" *ngIf="project.icons?.length">
-      <a *ngFor="let icon of project.icons" [href]="icon.url" target="_blank" rel="noopener noreferrer" class="icon-link"
-        [title]="icon.name">
-        <img [src]="icon.iconSrc" [alt]="icon.name" class="project-icon-img" />
-      </a>
+      <span *ngIf="project.state !== undefined" class="project-state" [ngStyle]="{'color': project.state.color}">
+        {{ project.state.name }}
+      </span>
     </div>
   </div>
-
-  <span *ngIf="project.state !== undefined" class="project-state"
-    [ngStyle]="{'color': project.state.color}">
-    {{ project.state.name }}
-  </span>
-</div>
