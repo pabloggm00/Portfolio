@@ -55,6 +55,15 @@ export class ProjectsComponent {
       isWebApp: true
     },
     {
+      title: 'Generador de Proyecto Flutter', description: 'Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada',
+      image: 'screenshots/004_project.webp', techs: [TECHS['angular'], TECHS['typescript'], TECHS['html'], TECHS['scss']],
+      icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/Flutter-Generator', iconSrc: 'icons/for_projects/github.svg' },
+        {name: 'DirecTo', url: 'https://pabloggm00.github.io/Flutter-Generator/', iconSrc: 'icons/for_projects/web.svg'}
+      ],
+      state: STATES['published'],
+      isWebApp: true
+    },
+    {
       title: 'KeepIt', description: 'App para saber donde guardé objetos. Desarrollado con local storage.',
       image: 'screenshots/002_project.webp', techs: [TECHS['flutter'], TECHS['dart']],
       icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/KeepIt', iconSrc: 'icons/for_projects/github.svg' },
