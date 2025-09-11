@@ -1,25 +1,36 @@
 .section {
-  padding: 100px 20px;
+  padding: 1rem;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.about-section{
+.about-section {
   min-height: 60vh;
   height: 85vh;
+  margin-top: 40px;
 
-  @media(max-width: 375px){
-    height: 100vh;
+  @media(max-width: 1024px) {
+    min-height: 50vh;
+    height: 60vh;
+  }
+
+  @media(max-width: 768px) {
+    margin-top: 60px;
+    height: 70vh;
+  }
+
+  @media(max-width: 480px) {
+    height: 90vh;
   }
 }
 
-.skills-section{
+.skills-section {
   min-height: auto;
   height: auto;
 
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     min-height: auto;
     height: auto;
   }

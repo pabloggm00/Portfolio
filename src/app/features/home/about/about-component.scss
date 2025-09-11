@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 5rem 2rem; 
+  padding: 5rem 2rem;
 
   .profile-pic {
     width: 250px;
@@ -11,7 +11,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1.5rem;
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   h1 {
@@ -123,30 +123,70 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 10rem 2rem;
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.3rem; }
-    .about-text { font-size: 0.95rem; }
+    padding: 4rem 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+    }
   }
 
   @media (max-width: 768px) {
-    padding: 8rem 1.5rem;
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.1rem; }
-    .about-text { font-size: 0.9rem; }
-    .buttons .btn { width: 100%; justify-content: center; }
+    padding: 1rem 1.5rem;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+    }
+
+    .buttons .btn {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   @media (max-width: 480px) {
     padding: 2rem 1rem;
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1rem; }
-    .about-text { font-size: 0.85rem; max-width: 100%; }
-    .profile-pic { width: 180px; height: 180px; }
-    .buttons { flex-direction: column; gap: 0.7rem; }
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .about-text {
+      font-size: 0.85rem;
+      max-width: 100%;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 0.7rem;
+    }
   }
 
-   @media(max-width: 375px){
+  @media(max-width: 375px) {
     padding: 0rem 1rem;
   }
 }
