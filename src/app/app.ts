@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
 export class App {
   protected readonly title = signal('portfolio');
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   get showNavbar(): boolean {
-    const hiddenRoutes = ['/privacy-policy'];
-    return !hiddenRoutes.includes(this.router.url);
+    const hiddenPrefixes = ['/privacy-policy'];
+    return !hiddenPrefixes.some(prefix => this.router.url.startsWith(prefix));
   }
 }
