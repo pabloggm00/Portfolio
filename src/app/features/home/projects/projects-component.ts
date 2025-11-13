@@ -48,6 +48,13 @@ export class ProjectsComponent {
 
   webApps = signal<Project[]>([
     {
+      title: 'Pokemon Card Collector', description: 'Gestor de colecciones Pokémon TCG',
+      image: 'screenshots/005_project.webp', techs: [TECHS['angular'], TECHS['nodejs'], TECHS['postgresql'], TECHS['docker']],
+      icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/pokemon-card-collector', iconSrc: 'icons/for_projects/github.svg' }],
+      state: STATES['published'],
+      isWebApp: true
+    },
+    {
       title: 'Portfolio', description: 'Mi presentación en página web hecha con Angular 20',
       image: 'screenshots/001_project.webp', techs: [TECHS['angular'], TECHS['typescript'], TECHS['html'], TECHS['scss']],
       icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/Portfolio', iconSrc: 'icons/for_projects/github.svg' }],

@@ -46,4 +46,7 @@ export const TECHS: Record<string, Tech> = {
   css: { name: 'CSS', color: '#1572b6' },
   scss: { name: 'SCSS', color: '#c6538c' },
   javascript: { name: 'JavaScript', color: '#f7df1e' },
+  postgresql: { name: 'PostgreSQL', color: '#336791' },
+  nodejs: { name: 'Node.js', color: '#339933' },
+  docker: { name: 'Docker', color: '#2496ed' },
 };
