@@ -1,7 +1,7 @@
 // Redes sociales y CV
 export const GITHUB_URL = 'https://github.com/pabloggm00';
 export const LINKEDIN_URL = 'https://linkedin.com/in/pablogonzalezdev';
-export const CV_URL = 'cv/CV_PabloGonzalez.pdf';
+export const CV_URL = 'https://raw.githubusercontent.com/pabloggm00/Portfolio/main/src/assets/cv/CV_PabloGonzalez.pdf';
 
 // Correo
 export const EMAIL = 'pabloggm00@gmail.com';
