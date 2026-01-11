@@ -23,6 +23,8 @@ export class AboutComponent {
   linkedinUrl = LINKEDIN_URL;
   cvUrl = CV_URL;
 
+  private readonly FORM_SUBMIT_URL = 'https://formsubmit.co/ajax/pabloggm00@gmail.com';
+
   ngAfterViewInit() {
     // Animación de fade + slide para todos los hijos
     gsap.from(this.aboutContainer.nativeElement.children, {
@@ -45,6 +47,29 @@ export class AboutComponent {
 
   openContact() {
     this.contactClick.emit();
+  }
+
+  trackDownload(event: MouseEvent) {
+    this.sendDownloadNotification();
+  }
+
+  private sendDownloadNotification() {
+    const payload = {
+      _subject: 'CV Descargado',
+      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
+      _captcha: 'false',
+      _template: 'table'
+    };
+
+    fetch(this.FORM_SUBMIT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload),
+      mode: 'cors'
+    }).catch(() => {});
   }
 
 

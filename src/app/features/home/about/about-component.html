@@ -10,7 +10,7 @@
   </p>
 
   <div class="buttons">
-    <a [href]="cvUrl" download class="btn primary-btn">Descargar CV</a>
+    <a [href]="cvUrl" download class="btn primary-btn" (click)="trackDownload($event)">Descargar CV</a>
     <button (click)="openContact()" #contactBtn class="btn secondary-btn">Contáctame</button>
   </div>
 
