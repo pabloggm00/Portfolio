@@ -65,9 +65,17 @@ export class ProjectsComponent {
       title: 'Generador de Proyecto Flutter', description: 'Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada',
       image: 'screenshots/004_project.webp', techs: [TECHS['angular'], TECHS['typescript'], TECHS['html'], TECHS['scss']],
       icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/Flutter-Generator', iconSrc: 'icons/for_projects/github.svg' },
-        {name: 'DirecTo', url: 'https://pabloggm00.github.io/Flutter-Generator/', iconSrc: 'icons/for_projects/web.svg'}
+      { name: 'DirecTo', url: 'https://pabloggm00.github.io/Flutter-Generator/', iconSrc: 'icons/for_projects/web.svg' }
       ],
       state: STATES['published'],
+      isWebApp: true
+    },
+    {
+      title: 'PokeHub', description: 'Pokédex completa con información de cada Pokémon. Desarrollado con la PokéAPI.',
+      image: 'screenshots/003_project.webp', techs: [TECHS['flutter'], TECHS['dart']],
+      state: STATES['finished'],
+      icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/PokeHub', iconSrc: 'icons/for_projects/github.svg' },
+      { name: 'APK', url: 'https://github.com/pabloggm00/PokeHub/releases/download/v1.1.4/PokeHub.apk', iconSrc: 'icons/for_projects/apk.svg' }],
       isWebApp: true
     },
     {
@@ -76,14 +84,6 @@ export class ProjectsComponent {
       icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/KeepIt', iconSrc: 'icons/for_projects/github.svg' },
       { name: 'APK', url: 'https://github.com/pabloggm00/KeepIt/releases/download/v1.0/KeepIt.apk', iconSrc: 'icons/for_projects/apk.svg' }],
       state: STATES['finished'],
-      isWebApp: true
-    },
-    {
-      title: 'PokeHub', description: 'Pokédex completa con información de cada Pokémon. Desarrollado con la PokéAPI.',
-      image: 'screenshots/003_project.webp', techs: [TECHS['flutter'], TECHS['dart']],
-      state: STATES['finished'],
-      icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/PokeHub', iconSrc: 'icons/for_projects/github.svg' },
-      { name: 'APK', url: 'https://github.com/pabloggm00/PokeHub/releases/download/v1.0/PokeHub.apk', iconSrc: 'icons/for_projects/apk.svg' }],
       isWebApp: true
     },
   ]);
