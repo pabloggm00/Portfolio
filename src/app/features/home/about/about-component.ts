@@ -43,10 +43,12 @@ export class AboutComponent {
     );
 
     observer.observe(this.contactBtn.nativeElement);
+    this.trackView();
   }
 
   openContact() {
     this.contactClick.emit();
+    this.trackContact();
   }
 
   trackDownload(event: MouseEvent) {
@@ -69,7 +71,53 @@ export class AboutComponent {
       },
       body: JSON.stringify(payload),
       mode: 'cors'
-    }).catch(() => {});
+    }).catch(() => { });
+  }
+
+  trackContact() {
+    this.sendContactNotification();
+  }
+
+  private sendContactNotification() {
+    const payload = {
+      _subject: 'Posible Contacto',
+      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
+      _captcha: 'false',
+      _template: 'table'
+    };
+
+    fetch(this.FORM_SUBMIT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload),
+      mode: 'cors'
+    }).catch(() => { });
+  }
+
+  trackView() {
+    this.sendViewNotification();
+  }
+
+  private sendViewNotification() {
+    const payload = {
+      _subject: 'Nueva Visita',
+      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
+      _captcha: 'false',
+      _template: 'table'
+    };
+
+    fetch(this.FORM_SUBMIT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload),
+      mode: 'cors'
+    }).catch(() => { });
   }
 
 
