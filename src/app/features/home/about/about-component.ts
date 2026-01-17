@@ -43,7 +43,7 @@ export class AboutComponent {
     );
 
     observer.observe(this.contactBtn.nativeElement);
-    this.trackView();
+    //this.trackView();
   }
 
   openContact() {

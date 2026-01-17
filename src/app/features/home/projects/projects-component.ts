@@ -71,8 +71,8 @@ export class ProjectsComponent {
       isWebApp: true
     },
     {
-      title: 'PokeHub', description: 'Pokédex completa con información de cada Pokémon. Desarrollado con la PokéAPI.',
-      image: 'screenshots/003_project.webp', techs: [TECHS['flutter'], TECHS['dart']],
+      title: 'PokeHub', description: 'Pokédex completa con información de cada Pokémon. Desarrollado con base de datos local.',
+      image: 'screenshots/003_project.webp', techs: [TECHS['flutter'], TECHS['dart'], TECHS['sqlite']],
       state: STATES['finished'],
       icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/PokeHub', iconSrc: 'icons/for_projects/github.svg' },
       { name: 'APK', url: 'https://github.com/pabloggm00/PokeHub/releases/download/v1.1.4/PokeHub.apk', iconSrc: 'icons/for_projects/apk.svg' }],
