@@ -3,11 +3,13 @@ import { HomeComponent } from './features/home/home/home-component';
 import { AboutMeComponent } from './features/aboutme/aboutme/aboutme';
 import { NotFoundComponent } from './features/notfound/notfound';
 import { KeepitPrivacy } from './features/privacy-policies/keepit-privacy/keepit-privacy';
+import { BidexPrivacy } from './features/privacy-policies/bidex-privacy/bidex-privacy';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'aboutme', component: AboutMeComponent },
     { path: 'privacy-policy/keepit', component: KeepitPrivacy },
+    { path: 'privacy-policy/bidex', component: BidexPrivacy},
     { path: '**', component: NotFoundComponent }
 ];
 
