@@ -3,10 +3,11 @@ import { CV_URL, GITHUB_URL, LINKEDIN_URL } from '../../../constants';
 import { ContactModalComponent } from "../../home/about/contact-modal-component/contact-modal-component";
 import { gsap } from 'gsap/gsap-core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../../core/translate.pipe';
 
 @Component({
   selector: 'app-aboutme',
-  imports: [CommonModule, ContactModalComponent],
+  imports: [CommonModule, ContactModalComponent, TranslatePipe],
   templateUrl: './aboutme.html',
   styleUrl: './aboutme.scss'
 })

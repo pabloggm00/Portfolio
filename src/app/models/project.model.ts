@@ -27,9 +27,9 @@ interface ProjectState{
 }
 
 export const STATES: Record<string, ProjectState> = {
-  onprogress: { name: 'En proceso', color: '#f44336'},
-  finished: {name: 'Finalizado', color: '#4caf50'},
-  published: {name: 'Publicado', color: '#AF2CA9FF'}
+  onprogress: { name: 'PROJECT_STATES.IN_PROGRESS', color: '#f44336'},
+  finished: {name: 'PROJECT_STATES.FINISHED', color: '#4caf50'},
+  published: {name: 'PROJECT_STATES.PUBLISHED', color: '#AF2CA9FF'}
 }
 
 

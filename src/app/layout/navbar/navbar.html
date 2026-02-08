@@ -1,6 +1,6 @@
 <nav class="navbar">
   <ul class="nav-links">
-    <li><a [routerLink]="['/']" (click)="scrollToTop()">Inicio</a></li>
-    <li><a [routerLink]="['/aboutme']" (click)="scrollToTop()">Sobre mí</a></li>
+    <li><a [routerLink]="['/']" (click)="scrollToTop()">{{ 'NAV.HOME' | translate }}</a></li>
+    <li><a [routerLink]="['/aboutme']" (click)="scrollToTop()">{{ 'NAV.ABOUT_ME' | translate }}</a></li>
   </ul>
 </nav>

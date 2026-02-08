@@ -1,0 +1,66 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT_ME": "Sobre mí"
+  },
+  "HOME": {
+    "WELCOME": "Bienvenido",
+    "CONTACT": "Contáctame",
+    "CONTACT_FLOATING": "Contáctame"
+  },
+  "ABOUT": {
+    "HI": "¡Hola, soy",
+    "NAME": "Pablo González",
+    "ROLE": "Desarrollador Frontend | Web & Apps",
+    "DESCRIPTION": "Soy un programador enfocado en desarrollo web y aplicaciones.",
+    "DESCRIPTION2": "La creación de videojuegos es un hobby para mí.",
+    "DOWNLOAD_CV": "Descargar CV",
+    "CONTACT_ME": "Contáctame"
+  },
+  "PROJECTS": {
+    "TITLE": "Proyectos",
+    "WEB_APPS": "Web / Apps",
+    "GAMES": "Videojuegos"
+  },
+  "SKILLS": {
+    "TITLE": "Skills"
+  },
+  "CONTACT_MODAL": {
+    "TITLE": "Contáctame",
+    "SUBTITLE": "Elige tu forma preferida de contacto:",
+    "DEFAULT_EMAIL": "Correo Predeterminado",
+    "GMAIL": "Gmail",
+    "WHATSAPP": "WhatsApp",
+    "SCAN_QR": "Escanea para agregar contacto"
+  },
+  "ABOUTME": {
+    "HI": "¡Hola! Soy",
+    "NAME": "Pablo González",
+    "ROLE": "Desarrollador Frontend | Web & Apps",
+    "DESCRIPTION1": "Soy un desarrollador web con especial interés en el frontend, aunque también puedo trabajar como fullstack o backend si el proyecto lo requiere.",
+    "DESCRIPTION2": "Comencé mi camino en el desarrollo con el grado superior de Aplicaciones Multiplataforma, lo que me dio una base sólida en programación. Más adelante estudié el grado superior de Animación 3D y el Máster de Desarrollo de Videojuegos, aunque actualmente mi enfoque principal es el desarrollo web y aplicaciones.",
+    "DESCRIPTION3": "Soy proactivo, comprometido y orientado al trabajo en equipo. Siempre busco aprender y crecer profesionalmente, y me entusiasma la idea de contribuir a proyectos innovadores.",
+    "DESCRIPTION4": "¡No dudes en contactarme si tienes alguna duda!",
+    "DOWNLOAD_CV": "Descargar CV",
+    "CONTACT_ME": "Contáctame"
+  },
+  "NOTFOUND": {
+    "TITLE": "404",
+    "MESSAGE1": "Ups… parece que esta página se fue de vacaciones 😅",
+    "MESSAGE2": "No te preocupes, vuelve al menú y sigue explorando."
+  },
+  "PROJECT_STATES": {
+    "IN_PROGRESS": "En proceso",
+    "FINISHED": "Finalizado",
+    "PUBLISHED": "Publicado"
+  },
+  "PROJECT_DESCRIPTIONS": {
+    "CHRONO_SPACE": "Rol como jefe de desarrollo y programación. Desarrollado por 8 alumnos en 3 meses",
+    "MENCIA": "Rol como líder de programación. Desarrollado por 30 alumnos en 3 meses",
+    "POKEMON_CARD": "Gestor de colecciones Pokémon TCG",
+    "PORTFOLIO": "Mi presentación en página web hecha con Angular 20",
+    "FLUTTER_GEN": "Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada",
+    "POKEHUB": "Pokédex completa con información de cada Pokémon. Desarrollado con base de datos local.",
+    "KEEPIT": "App para saber donde guardé objetos. Desarrollado con local storage."
+  }
+}

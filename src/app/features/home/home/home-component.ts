@@ -5,11 +5,12 @@ import { AboutComponent } from '../about/about-component';
 import { ProjectsComponent } from '../projects/projects-component';
 import { SkillsComponent } from '../skills/skills-component';
 import { ContactModalComponent } from '../about//contact-modal-component/contact-modal-component';
+import { TranslatePipe } from '../../../core/translate.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, AboutComponent, ProjectsComponent, SkillsComponent, ContactModalComponent],
+  imports: [CommonModule, AboutComponent, ProjectsComponent, SkillsComponent, ContactModalComponent, TranslatePipe],
   templateUrl: './home-component.html',
   styleUrls: ['./home-component.scss']
 })

@@ -1,12 +1,12 @@
 <section class="projects-container">
-  <h2>Proyectos</h2>
+  <h2>{{ 'PROJECTS.TITLE' | translate }}</h2>
 
   <div class="category-buttons">
     <button class="category-btn" [class.active]="activeCategory() === 'web'" (click)="setCategory('web')">
-      Web / Apps
+      {{ 'PROJECTS.WEB_APPS' | translate }}
     </button>
     <button class="category-btn" [class.active]="activeCategory() === 'games'" (click)="setCategory('games')">
-      Videojuegos
+      {{ 'PROJECTS.GAMES' | translate }}
     </button>
   </div>
 

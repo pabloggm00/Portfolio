@@ -1,4 +1,23 @@
 @if (showNavbar){
     <app-navbar></app-navbar>
 }
+
+<div class="lang-switcher" aria-label="Language selector">
+  <button 
+    class="lang-btn" 
+    [class.active]="currentLang === 'es'"
+    (click)="setLanguage('es')"
+    title="Español">
+    ES
+  </button>
+
+  <button 
+    class="lang-btn" 
+    [class.active]="currentLang === 'en'"
+    (click)="setLanguage('en')"
+    title="English">
+    EN
+  </button>
+</div>
+
 <router-outlet></router-outlet>

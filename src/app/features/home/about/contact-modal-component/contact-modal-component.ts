@@ -1,11 +1,12 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EMAIL_MAILTO, EMAIL_GMAIL, WHATSAPP_URL } from '../../../../constants';
+import { TranslatePipe } from '../../../../core/translate.pipe';
 
 @Component({
   selector: 'app-contact-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './contact-modal-component.html',
   styleUrls: ['./contact-modal-component.scss']
 })

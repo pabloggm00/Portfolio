@@ -1,34 +1,30 @@
 <div #aboutContainer class="aboutme-container">
     <img src="profile/profile3.jpg" alt="Pablo Gonzalez" class="profile-pic" />
 
-    <h1>¡Hola! Soy <span class="name">Pablo González</span></h1>
-    <h2>Desarrollador Frontend | Web & Apps</h2>
+    <h1>{{ 'ABOUTME.HI' | translate }} <span class="name">{{ 'ABOUTME.NAME' | translate }}</span></h1>
+    <h2>{{ 'ABOUTME.ROLE' | translate }}</h2>
 
     <div class="about-texts">
         <p>
-            Soy un desarrollador web con especial interés en el frontend, aunque también puedo trabajar como fullstack o
-            backend si el proyecto lo requiere.
+            {{ 'ABOUTME.DESCRIPTION1' | translate }}
         </p>
 
         <p>
-            Comencé mi camino en el desarrollo con el grado superior de Aplicaciones Multiplataforma, lo que me dio una
-            base sólida en programación. Más adelante estudié el grado superior de Animación 3D y el Máster de
-            Desarrollo de Videojuegos, aunque actualmente mi enfoque principal es el desarrollo web y aplicaciones.
+            {{ 'ABOUTME.DESCRIPTION2' | translate }}
         </p>
 
         <p>
-            Soy proactivo, comprometido y orientado al trabajo en equipo. Siempre busco aprender y crecer
-            profesionalmente, y me entusiasma la idea de contribuir a proyectos innovadores.
+            {{ 'ABOUTME.DESCRIPTION3' | translate }}
         </p>
 
         <p>
-            ¡No dudes en contactarme si tienes alguna duda!
+            {{ 'ABOUTME.DESCRIPTION4' | translate }}
         </p>
     </div>
 
     <div class="buttons">
-        <a [href]="cvUrl" download class="btn primary-btn">Descargar CV</a>
-        <button (click)="openContactModal()" class="btn secondary-btn">Contáctame</button>
+        <a [href]="cvUrl" download class="btn primary-btn">{{ 'ABOUTME.DOWNLOAD_CV' | translate }}</a>
+        <button (click)="openContactModal()" class="btn secondary-btn">{{ 'ABOUTME.CONTACT_ME' | translate }}</button>
     </div>
 
     <div class="social-buttons">

@@ -1,4 +1,5 @@
 <section class="home-container">
+
   <section class="section about-section">
     <div #aboutSection>
       <app-about (contactClick)="openContactModal()" (contactVisible)="showFloatingBtn = !$event"></app-about>
@@ -14,7 +15,7 @@
   </section>
 
   <button class="btn secondary-btn floating" [class.show]="showFloatingBtn" (click)="openContactModal()">
-    Contáctame
+    {{ 'HOME.CONTACT_FLOATING' | translate }}
   </button>
 
   <app-contact-modal *ngIf="showContactModal()" (close)="closeContactModal()">

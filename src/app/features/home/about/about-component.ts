@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { GITHUB_URL, LINKEDIN_URL, CV_URL } from '../../../constants';
 import gsap from 'gsap';
 import { RouterModule } from '@angular/router';
+import { TranslatePipe } from '../../../core/translate.pipe';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './about-component.html',
   styleUrls: ['./about-component.scss']
 })
@@ -43,15 +44,15 @@ export class AboutComponent {
     );
 
     observer.observe(this.contactBtn.nativeElement);
-    this.trackView();
+    //this.newView();
   }
 
   openContact() {
     this.contactClick.emit();
-    this.trackContact();
+    this.buttonContact();
   }
 
-  trackDownload(event: MouseEvent) {
+  buttonDownload(event: MouseEvent) {
     this.sendDownloadNotification();
   }
 
@@ -74,13 +75,13 @@ export class AboutComponent {
     }).catch(() => { });
   }
 
-  trackContact() {
+  buttonContact() {
     this.sendContactNotification();
   }
 
   private sendContactNotification() {
     const payload = {
-      _subject: 'Posible Contacto',
+      _subject: 'Contact',
       message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
       _captcha: 'false',
       _template: 'table'
@@ -97,13 +98,13 @@ export class AboutComponent {
     }).catch(() => { });
   }
 
-  trackView() {
+  newView() {
     this.sendViewNotification();
   }
 
   private sendViewNotification() {
     const payload = {
-      _subject: 'Nueva Visita',
+      _subject: 'Visit',
       message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
       _captcha: 'false',
       _template: 'table'

@@ -1,17 +1,17 @@
 <div #aboutContainer class="about-container">
   <img src="profile/profile2.webp" alt="Pablo Gonzalez" class="profile-pic" />
   
-  <h1>¡Hola, soy <a [routerLink]="['/aboutme']"><span class="name">Pablo González</span></a>!</h1>
-  <h2>Desarrollador Frontend | Web & Apps</h2>
+  <h1>{{ 'ABOUT.HI' | translate }} <a [routerLink]="['/aboutme']"><span class="name">{{ 'ABOUT.NAME' | translate }}</span></a>!</h1>
+  <h2>{{ 'ABOUT.ROLE' | translate }}</h2>
   
   <p class="about-text">
-    Soy un programador enfocado en desarrollo web y aplicaciones.<br>
-    La creación de videojuegos es un hobby para mí.
+    {{ 'ABOUT.DESCRIPTION' | translate }}<br>
+    {{ 'ABOUT.DESCRIPTION2' | translate }}
   </p>
 
   <div class="buttons">
-    <a [href]="cvUrl" download class="btn primary-btn" (click)="trackDownload($event)">Descargar CV</a>
-    <button (click)="openContact()" #contactBtn class="btn secondary-btn">Contáctame</button>
+    <a [href]="cvUrl" download class="btn primary-btn" (click)="buttonDownload($event)">{{ 'ABOUT.DOWNLOAD_CV' | translate }}</a>
+    <button (click)="openContact()" #contactBtn class="btn secondary-btn">{{ 'ABOUT.CONTACT_ME' | translate }}</button>
   </div>
 
   <div class="social-buttons">
