@@ -1,38 +1,58 @@
 .section {
-  padding: 1rem;
-  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .about-section {
-  min-height: 60vh;
-  height: 85vh;
-  margin-top: 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 80px;
 
   @media(max-width: 1024px) {
-    min-height: 50vh;
-    height: 60vh;
+    min-height: 90vh;
+    padding-top: 70px;
   }
 
   @media(max-width: 768px) {
-    margin-top: 60px;
-    height: 70vh;
+    min-height: 85vh;
+    padding-top: 80px;
   }
 
   @media(max-width: 480px) {
-    height: 90vh;
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+}
+
+.projects-section {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+
+  @media(max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+
+  @media(max-width: 480px) {
+    padding: 2rem 0.5rem;
   }
 }
 
 .skills-section {
   min-height: auto;
-  height: auto;
+  padding: 4rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
 
   @media (max-width: 480px) {
-    min-height: auto;
-    height: auto;
+    padding: 2rem 1rem;
   }
 }
 

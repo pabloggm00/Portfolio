@@ -10,7 +10,7 @@
     </button>
   </div>
 
-  <div *ngIf="showGrid()" #projectsGrid class="projects-grid fade-grid">
+  <div #projectsGrid class="projects-grid" [class.fade-out]="!showGrid()">
   <app-project-card
     *ngFor="let project of activeProjects"
     [project]="project"

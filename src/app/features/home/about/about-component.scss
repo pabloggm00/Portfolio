@@ -3,7 +3,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 
   .profile-pic {
     width: 250px;
@@ -123,7 +126,7 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
 
     h1 {
       font-size: 2.5rem;
@@ -139,10 +142,10 @@
   }
 
   @media (max-width: 768px) {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1.5rem;
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     h2 {
@@ -153,21 +156,21 @@
       font-size: 0.9rem;
     }
 
-    .buttons .btn {
-      width: 100%;
-      justify-content: center;
+    .profile-pic {
+      width: 200px;
+      height: 200px;
     }
   }
 
   @media (max-width: 480px) {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .about-text {
@@ -176,17 +179,19 @@
     }
 
     .profile-pic {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
+      margin-bottom: 1rem;
     }
 
     .buttons {
       flex-direction: column;
       gap: 0.7rem;
-    }
-  }
+      width: 100%;
 
-  @media(max-width: 375px) {
-    padding: 0rem 1rem;
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }
