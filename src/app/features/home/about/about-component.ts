@@ -44,7 +44,7 @@ export class AboutComponent {
     );
 
     observer.observe(this.contactBtn.nativeElement);
-    //this.newView();
+    this.newView();
   }
 
   openContact() {
