@@ -5,7 +5,7 @@
     text-align: center;
     width: 100%;
     min-height: 100vh;
-    padding-top: 5rem;
+    padding-top: 7.5rem;
     padding-bottom: 5rem;
     .profile-pic {
         width: 400px;
@@ -162,7 +162,7 @@
 
     // Móviles
     @media (max-width: 700px) {
-        padding-top: 4rem;
+        padding-top: 7rem;
         padding-bottom: 2rem;
         .profile-pic {
             width: 200px;
@@ -171,16 +171,18 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            max-width: 85%;
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            max-width: 85%;
         }
 
         .about-texts {
-            max-width: 90%;
-            font-size: 1rem;
+            max-width: 85%;
+            font-size: 0.9rem;
             line-height: 1.5;
         }
 
