@@ -19,8 +19,16 @@
   },
   "PROJECTS": {
     "TITLE": "Proyectos",
-    "WEB_APPS": "Web / Apps",
-    "GAMES": "Videojuegos"
+    "FEATURED": "Destacados",
+    "WEB": "Web",
+    "APP": "Apps",
+    "GAMES": "Videojuegos",
+    "WEB_APPS": "Web / Apps"
+  },
+  "BADGES": {
+    "AVAILABLE_ON": "Disponible en",
+    "GOOGLE_PLAY": "Google Play",
+    "STEAM": "Steam"
   },
   "SKILLS": {
     "TITLE": "Skills"
@@ -60,7 +68,7 @@
     "POKEMON_CARD": "Gestor de colecciones Pokémon TCG",
     "PORTFOLIO": "Mi presentación en página web hecha con Angular 20",
     "FLUTTER_GEN": "Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada",
-    "POKEHUB": "Pokédex completa con información de cada Pokémon. Desarrollado con base de datos local.",
+    "BIDEX": "Pokédex completa con información de cada Pokémon. Desarrollado con base de datos local.",
     "KEEPIT": "App para saber donde guardé objetos. Desarrollado con local storage."
   }
 }
