@@ -1,22 +1,39 @@
 <section class="projects-container">
-  <h2>{{ 'PROJECTS.TITLE' | translate }}</h2>
+  <div class="projects-header">
+    <h2>{{ 'PROJECTS.TITLE' | translate }}</h2>
+  </div>
 
   <div class="category-buttons">
-    <button class="category-btn" [class.active]="activeCategory() === 'web'" (click)="setCategory('web')">
-      {{ 'PROJECTS.WEB_APPS' | translate }}
-    </button>
-    <button class="category-btn" [class.active]="activeCategory() === 'games'" (click)="setCategory('games')">
-      {{ 'PROJECTS.GAMES' | translate }}
+    <button
+      *ngFor="let cat of categories"
+      class="category-btn"
+      [class.active]="activeCategory() === cat.key"
+      (click)="setCategory(cat.key)">
+      {{ cat.label | translate }}
     </button>
   </div>
 
-  <div #projectsGrid class="projects-grid" [class.fade-out]="!showGrid()">
-  <app-project-card
-    *ngFor="let project of activeProjects"
-    [project]="project"
-    [isWebApp]="project.isWebApp"
-    #cardRef>
-  </app-project-card>
-</div>
+  <div #projectsGrid
+    class="projects-grid"
+    [class.featured-grid]="activeCategory() === 'featured'"
+    [class.fade-out]="!showGrid()">
 
+    <ng-container *ngIf="activeCategory() === 'featured'">
+      <app-featured-card
+        *ngFor="let project of activeProjects"
+        [project]="project"
+        #cardRef>
+      </app-featured-card>
+    </ng-container>
+
+    <ng-container *ngIf="activeCategory() !== 'featured'">
+      <app-project-card
+        *ngFor="let project of activeProjects"
+        [project]="project"
+        [isWebApp]="project.isWebApp"
+        #cardRef>
+      </app-project-card>
+    </ng-container>
+
+  </div>
 </section>

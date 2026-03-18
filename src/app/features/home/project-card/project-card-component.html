@@ -11,11 +11,29 @@
       </span>
     </div>
     <div class="project-footer">
-      <div class="project-icons" *ngIf="project.icons?.length">
-        <a *ngFor="let icon of project.icons" [href]="icon.url" target="_blank" rel="noopener noreferrer"
-          class="icon-link" [title]="icon.name">
-          <img [src]="icon.iconSrc" [alt]="icon.name" class="project-icon-img" />
+      <div class="footer-left">
+        <a *ngIf="project.googlePlayUrl" [href]="project.googlePlayUrl" target="_blank" rel="noopener noreferrer" class="gplay-badge">
+          <img src="icons/for_projects/googleplay.svg" alt="Google Play" class="gplay-badge-icon" />
+          <span class="gplay-badge-text">
+            <small>{{ 'BADGES.AVAILABLE_ON' | translate }}</small>
+            {{ 'BADGES.GOOGLE_PLAY' | translate }}
+          </span>
         </a>
+
+        <a *ngIf="project.steamUrl" [href]="project.steamUrl" target="_blank" rel="noopener noreferrer" class="steam-badge">
+          <img src="icons/for_projects/steam.svg" alt="Steam" class="steam-badge-icon" />
+          <span class="steam-badge-text">
+            <small>{{ 'BADGES.AVAILABLE_ON' | translate }}</small>
+            {{ 'BADGES.STEAM' | translate }}
+          </span>
+        </a>
+
+        <div class="project-icons" *ngIf="project.icons?.length">
+          <a *ngFor="let icon of project.icons" [href]="icon.url" target="_blank" rel="noopener noreferrer"
+            class="icon-link" [title]="icon.name">
+            <img [src]="icon.iconSrc" [alt]="icon.name" class="project-icon-img" />
+          </a>
+        </div>
       </div>
 
       <span *ngIf="project.state !== undefined" class="project-state" [ngStyle]="{'color': project.state.color}">

@@ -1,0 +1,30 @@
+<div class="lightbox-backdrop" *ngIf="lightbox.state()" (click)="lightbox.close()">
+
+  <button class="lightbox-close" (click)="lightbox.close()">&#x2715;</button>
+
+  <button
+    *ngIf="lightbox.state()!.images.length > 1"
+    class="lightbox-nav prev"
+    (click)="$event.stopPropagation(); lightbox.prev()">
+    &#8249;
+  </button>
+
+  <img
+    [src]="lightbox.state()!.images[lightbox.state()!.index]"
+    alt="preview"
+    class="lightbox-img"
+    (click)="$event.stopPropagation()"
+  />
+
+  <button
+    *ngIf="lightbox.state()!.images.length > 1"
+    class="lightbox-nav next"
+    (click)="$event.stopPropagation(); lightbox.next()">
+    &#8250;
+  </button>
+
+  <div class="lightbox-counter" *ngIf="lightbox.state()!.images.length > 1">
+    {{ lightbox.state()!.index + 1 }} / {{ lightbox.state()!.images.length }}
+  </div>
+
+</div>

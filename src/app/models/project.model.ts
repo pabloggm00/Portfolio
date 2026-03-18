@@ -3,16 +3,22 @@ interface Tech {
   color: string;
 }
 
+export type ProjectCategory = 'featured' | 'web' | 'app' | 'game';
+
 export interface Project {
   title: string;
   description: string;
   image: string;
   urlCode?: string;
   urlDemo?: string;
-  techs?: Tech[]; // array de tecnologías
-  state?: ProjectState; // true = finalizado, false = en proceso
+  techs?: Tech[];
+  state?: ProjectState;
   icons?: IconoProjectCard[];
   isWebApp?: boolean;
+  categories?: ProjectCategory[];
+  featuredImages?: string[];  // imágenes del carrusel (solo para destacados)
+  googlePlayUrl?: string;     // enlace a Google Play Store
+  steamUrl?: string;           // enlace a Steam
 }
 
 interface IconoProjectCard {

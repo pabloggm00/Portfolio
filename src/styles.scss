@@ -1,10 +1,20 @@
 :root {
-  // --bg-color: #03132b;
-  --surface-color: #1e1e1e;
-  --text-color: #e0e0e0;
-  --accent-color: #00bcd4;
-  --hover-color: rgba(255, 255, 255, 0.05);
-  --border-radius: 8px;
+  --bg:           #0d0d0d;
+  --surface-1:    #131313;
+  --surface-2:    #1a1a1a;
+  --surface-3:    #212121;
+  --border:       #252525;
+  --border-hover: #383838;
+  --text-primary:   #e0e0e0;
+  --text-subtitle:  #a6bed0;
+  --text-muted:     #888888;
+  --accent:       #e8b84b;
+  --accent-dim:   rgba(232, 184, 75, 0.12);
+  --accent-glow:  rgba(232, 184, 75, 0.25);
+  --accent-dark:  #c49a30;
+  --radius-block: 14px;
+  --radius-card:  10px;
+  --radius-pill:  30px;
 }
 
 * {
@@ -15,29 +25,92 @@
 }
 
 body {
-  background: linear-gradient(135deg,
-      #0a0f25, // azul muy oscuro
-      #0f163d, // azul profundo
-      #2b0d3f, // morado oscuro
-      #2c073a // morado profundo casi negro
-    );
-  color: var(--text-color);
+  background-color: var(--bg);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--accent);
 }
 
 section {
-  padding: 2rem 2rem;
+  padding: 2rem;
 }
 
-/* Para Chrome, Brave, Edge y Safari */
+/* Bloque base — usado en todas las secciones */
+.block-panel {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-block);
+  padding: 2rem;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+}
+
+/* Botones globales */
+.btn {
+  padding: 0.6rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+
+  &.primary-btn {
+    background-color: var(--accent);
+    color: #0d0d0d;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--accent-dark);
+    }
+  }
+
+  &.secondary-btn {
+    background-color: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+
+    &:hover {
+      background-color: var(--accent-dim);
+    }
+  }
+}
+
+/* Heading con línea decorativa */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 2px;
+    flex: 1;
+    background: var(--border);
+    border-radius: 2px;
+  }
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -45,17 +118,16 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.15); // color claro y elegante
+  background-color: var(--border-hover);
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #555;
 }
 
-/* Para Firefox */
 * {
-  scrollbar-width: thin; /* "thin" o "auto" o "none" */
+  scrollbar-width: thin;
 }
 
