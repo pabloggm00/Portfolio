@@ -65,10 +65,10 @@
   "PROJECT_DESCRIPTIONS": {
     "CHRONO_SPACE": "Role as development and programming lead. Developed by 8 students in 3 months",
     "MENCIA": "Role as programming leader. Developed by 30 students in 3 months",
-    "POKEMON_CARD": "Pokémon TCG collection manager",
+    "POKEMON_CARD": "A Dockerized TCG management engine that automates catalog updates through external API integration. It synchronizes remote data into a local database for persistent collection tracking and features dynamic set customization, allowing the creation of hybrid expansions. Built with a focus on scalable architecture and real-time synchronization with the latest market releases.",
     "PORTFOLIO": "My presentation website made with Angular 20",
     "FLUTTER_GEN": "Basic Flutter project generator. Generates a .bat file. Run in the desired folder",
-    "BIDEX": "Complete Pokédex with information about each Pokémon. Developed with local database.",
+    "BIDEX": "Competitive strategy tool with native Pokémon Showdown support, fully integrated with the Pokémon Champions meta. Built with an optimized local database architecture, it features advanced team management and data customization through CSV file processing.",
     "KEEPIT": "App to know where I stored objects. Developed with local storage."
   }
 }

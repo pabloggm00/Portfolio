@@ -65,10 +65,10 @@
   "PROJECT_DESCRIPTIONS": {
     "CHRONO_SPACE": "Rol como jefe de desarrollo y programación. Desarrollado por 8 alumnos en 3 meses",
     "MENCIA": "Rol como líder de programación. Desarrollado por 30 alumnos en 3 meses",
-    "POKEMON_CARD": "Gestor de colecciones Pokémon TCG",
+    "POKEMON_CARD": "Motor de gestión de cartas (TCG) contenerizado en Docker. El sistema automatiza la actualización de catálogos masivos mediante el consumo de APIs externas, integrándolos en una base de datos local para la gestión persistente de colecciones. Permite generar expansiones personalizadas mediante la fusión dinámica de datos, garantizando una arquitectura escalable y sincronizada con los últimos lanzamientos.",
     "PORTFOLIO": "Mi presentación en página web hecha con Angular 20",
     "FLUTTER_GEN": "Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada",
-    "BIDEX": "Pokédex completa con información de cada Pokémon. Desarrollado con base de datos local.",
+    "BIDEX": "Herramienta de estrategia competitiva con soporte nativo para Pokémon Showdown e integrada con el meta de Pokémon Champions. Desarrollada con una arquitectura de base de datos local optimizada, permite la gestión avanzada de equipos y la personalización de datos mediante archivos CSV.",
     "KEEPIT": "App para saber donde guardé objetos. Desarrollado con local storage."
   }
 }
