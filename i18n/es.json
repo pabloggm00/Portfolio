@@ -69,6 +69,7 @@
     "PORTFOLIO": "Mi presentación en página web hecha con Angular 20",
     "FLUTTER_GEN": "Generador básico de un proyecto Flutter. Genera un archivo .bat. Ejecutar en la carpeta deseada",
     "BIDEX": "Herramienta de estrategia competitiva con soporte nativo para Pokémon Showdown e integrada con el meta de Pokémon Champions. Desarrollada con una arquitectura de base de datos local optimizada, permite la gestión avanzada de equipos y la personalización de datos mediante archivos CSV.",
+    "BIDEX_WEB": "Herramienta de apoyo al juego competitivo, con soporte nativo para Pokémon Showdown e integración con el metajuego de Pokémon Champions. Implementada con una arquitectura de microservicios en Supabase, separando la gestión de usuarios de los datos de Pokémon para mejorar la escalabilidad.",
     "KEEPIT": "App para saber donde guardé objetos. Desarrollado con local storage."
   }
 }
