@@ -55,5 +55,6 @@ export const TECHS: Record<string, Tech> = {
   postgresql: { name: 'PostgreSQL', color: '#336791' },
   nodejs: { name: 'Node.js', color: '#339933' },
   docker: { name: 'Docker', color: '#2496ed' },
-  sqlite: { name: 'SQLite', color: '#4479A1'}
+  sqlite: { name: 'SQLite', color: '#4479A1'},
+  supabase: { name: 'Supabase', color: '#126016'},
 };

@@ -53,7 +53,7 @@ export class ProjectsComponent {
         categories: ['game']
       },
       {
-        title: 'BiDex',
+        title: 'BiDex App',
         description: t('PROJECT_DESCRIPTIONS.BIDEX'),
         image: 'screenshots/003_bidex/1.webp',
         techs: [TECHS['flutter'], TECHS['dart'], TECHS['sqlite']],
@@ -70,6 +70,23 @@ export class ProjectsComponent {
         ]
       },
       {
+        title: 'BiDex Web',
+        description: t('PROJECT_DESCRIPTIONS.BIDEX_WEB'),
+        image: 'screenshots/003_bidex/1.webp',
+        techs: [TECHS['angular'], TECHS['typescript'], TECHS['scss'], TECHS['supabase']],
+        state: STATES['published'],
+        icons: [
+          { name: 'Web', url: 'https://bidex.app', iconSrc: 'icons/for_projects/web.svg' },
+        ],
+        isWebApp: true,
+        categories: ['featured', 'web'],
+        featuredImages: [
+          'screenshots/003_bidex_web/1.webp',
+          'screenshots/003_bidex_web/2.webp',
+          'screenshots/003_bidex_web/3.webp',
+        ]
+      },
+      {
         title: 'Pokemon Card Collector',
         description: t('PROJECT_DESCRIPTIONS.POKEMON_CARD'),
         image: 'screenshots/005_cardcollector/1.webp',
@@ -77,7 +94,7 @@ export class ProjectsComponent {
         icons: [{ name: 'GitHub', url: 'https://github.com/pabloggm00/pokemon-card-collector', iconSrc: 'icons/for_projects/github.svg' }],
         state: STATES['published'],
         isWebApp: true,
-        categories: ['featured', 'web'],
+        categories: ['web'],
         featuredImages: [
           'screenshots/005_cardcollector/1.webp',
           'screenshots/005_cardcollector/2.webp',
