@@ -65,7 +65,7 @@ export class ProjectsComponent {
         featuredImages: [
           'screenshots/003_bidex/1.webp',
           'screenshots/003_bidex/2.webp',
-          // 'screenshots/003_bidex/3.webp',
+          'screenshots/003_bidex/3.webp',
           // 'screenshots/003_bidex/4.webp',
         ]
       },
