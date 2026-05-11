@@ -65,14 +65,14 @@ export class ProjectsComponent {
         featuredImages: [
           'screenshots/003_bidex/1.webp',
           'screenshots/003_bidex/2.webp',
-          'screenshots/003_bidex/3.webp',
-          'screenshots/003_bidex/4.webp',
+          // 'screenshots/003_bidex/3.webp',
+          // 'screenshots/003_bidex/4.webp',
         ]
       },
       {
         title: 'BiDex Web',
         description: t('PROJECT_DESCRIPTIONS.BIDEX_WEB'),
-        image: 'screenshots/003_bidex/1.webp',
+        image: 'screenshots/003_bidex_web/1.webp',
         techs: [TECHS['angular'], TECHS['typescript'], TECHS['scss'], TECHS['supabase']],
         state: STATES['published'],
         icons: [
