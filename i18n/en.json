@@ -68,8 +68,8 @@
     "POKEMON_CARD": "A Dockerized TCG management engine that automates catalog updates through external API integration. It synchronizes remote data into a local database for persistent collection tracking and features dynamic set customization, allowing the creation of hybrid expansions. Built with a focus on scalable architecture and real-time synchronization with the latest market releases.",
     "PORTFOLIO": "My presentation website made with Angular 20",
     "FLUTTER_GEN": "Basic Flutter project generator. Generates a .bat file. Run in the desired folder",
-    "BIDEX": "Competitive strategy tool with native Pokémon Showdown support, fully integrated with the Pokémon Champions meta. Built with an optimized local database architecture, it features advanced team management and data customization through CSV file processing.",
-    "BIDEX_WEB": "Tool for competitive play support, featuring native integration with Pokémon Showdown and the Pokémon Champions metagame. Built on a microservices architecture using Supabase, with a clear separation between user management and Pokémon data to enhance scalability.",
+    "BIDEX": "Native mobile app for competitive strategy, featuring support for Pokémon Showdown and integration with the Pokémon Champions metagame. Connected to a unified Supabase backend, it enables seamless team management and real-time synchronization from any device.",
+    "BIDEX_WEB": "Web platform for the BiDex ecosystem. It provides the same competitive analysis and management tools as the mobile app, operating under a shared microservices architecture on Supabase for a smooth and scalable user experience directly from the browser.",
     "KEEPIT": "App to know where I stored objects. Developed with local storage."
   }
 }
