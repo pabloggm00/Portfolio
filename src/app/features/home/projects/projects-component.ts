@@ -56,7 +56,7 @@ export class ProjectsComponent {
         title: 'BiDex App',
         description: t('PROJECT_DESCRIPTIONS.BIDEX'),
         image: 'screenshots/003_bidex/1.webp',
-        techs: [TECHS['flutter'], TECHS['dart'], TECHS['sqlite']],
+        techs: [TECHS['flutter'], TECHS['dart'], TECHS['supabase'], TECHS['postgresql']],
         state: STATES['published'],
         icons: [],
         googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.pabnauts.bidex&pcampaignid=web_share',
@@ -73,7 +73,7 @@ export class ProjectsComponent {
         title: 'BiDex Web',
         description: t('PROJECT_DESCRIPTIONS.BIDEX_WEB'),
         image: 'screenshots/003_bidex_web/1.webp',
-        techs: [TECHS['angular'], TECHS['typescript'], TECHS['scss'], TECHS['supabase']],
+        techs: [TECHS['angular'], TECHS['typescript'], TECHS['scss'], TECHS['supabase'], TECHS['postgresql']],
         state: STATES['published'],
         icons: [
           { name: 'Web', url: 'https://bidex.app', iconSrc: 'icons/for_projects/web.svg' },

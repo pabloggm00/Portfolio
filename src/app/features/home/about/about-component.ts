@@ -52,74 +52,66 @@ export class AboutComponent {
     this.buttonContact();
   }
 
-  buttonDownload(event: MouseEvent) {
-    this.sendDownloadNotification();
-  }
+  private sendNotification(subject: string, message: string = 'Interacción en el portfolio') {
+    // 1. Buscamos el parámetro '?ref=' en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlRef = urlParams.get('ref');
 
-  private sendDownloadNotification() {
+    // 2. Definimos el origen (Prioridad: Parámetro URL > Referrer > Desconocido)
+    const referrer = urlRef || document.referrer || 'Acceso directo o desconocido';
+
+    // Resto del contexto técnico
+    const currentPath = window.location.pathname;
+
+    const detailedMessage = `
+      ${message}
+      
+      Detalles técnicos de la visita:
+      -----------------------------------
+      Fecha: ${new Date().toLocaleString('es-ES')}
+      Ruta exacta: ${currentPath}
+      Origen: ${referrer}
+    `;
+
     const payload = {
-      _subject: 'CV Descargado',
-      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
-      _captcha: 'false',
-      _template: 'table'
+      access_key: '58384660-ca14-4e2a-8886-ea7db6c8b8be',
+      subject: subject,
+      message: detailedMessage
     };
 
-    fetch(this.FORM_SUBMIT_URL, {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(payload),
-      mode: 'cors'
-    }).catch(() => { });
+      body: JSON.stringify(payload)
+    }).catch(err => console.error('Error registrando evento', err));
+  }
+
+  private sendDownloadNotification() {
+    this.sendNotification('CV Descargado');
+  }
+
+  private sendContactNotification() {
+    this.sendNotification('Clic en Contacto');
+  }
+
+  private sendViewNotification() {
+    this.sendNotification('Nueva Visita al Portfolio');
+  }
+
+
+  buttonDownload(event: MouseEvent) {
+    this.sendDownloadNotification();
   }
 
   buttonContact() {
     this.sendContactNotification();
   }
 
-  private sendContactNotification() {
-    const payload = {
-      _subject: 'Contact',
-      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
-      _captcha: 'false',
-      _template: 'table'
-    };
-
-    fetch(this.FORM_SUBMIT_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload),
-      mode: 'cors'
-    }).catch(() => { });
-  }
-
   newView() {
     this.sendViewNotification();
   }
-
-  private sendViewNotification() {
-    const payload = {
-      _subject: 'Visit',
-      message: `Fecha: ${new Date().toLocaleString('es-ES')}`,
-      _captcha: 'false',
-      _template: 'table'
-    };
-
-    fetch(this.FORM_SUBMIT_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload),
-      mode: 'cors'
-    }).catch(() => { });
-  }
-
 
 }
