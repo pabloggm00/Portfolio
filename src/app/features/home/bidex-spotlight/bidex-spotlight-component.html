@@ -1,0 +1,53 @@
+<article class="spotlight">
+  <div class="gallery">
+    <button class="gallery-main" (click)="openLightbox()" [attr.aria-label]="'BIDEX.ENLARGE' | translate">
+      <img [src]="images[currentIndex()]" [alt]="'BIDEX.IMAGE_ALT' | translate" />
+    </button>
+
+    <div class="gallery-thumbs">
+      <button
+        *ngFor="let img of images; let i = index"
+        class="thumb"
+        [class.active]="currentIndex() === i"
+        [attr.aria-label]="('BIDEX.IMAGE_ALT' | translate) + ' ' + (i + 1)"
+        (click)="select(i)">
+        <img [src]="img" alt="" loading="lazy" />
+      </button>
+    </div>
+  </div>
+
+  <div class="info">
+    <span class="eyebrow">{{ 'BIDEX.EYEBROW' | translate }}</span>
+
+    <div class="brand">
+      <img src="screenshots/003_bidex/1.webp" alt="" class="logo" />
+      <div>
+        <h3>BiDex</h3>
+        <p class="tagline">{{ 'BIDEX.TAGLINE' | translate }}</p>
+      </div>
+    </div>
+
+    <dl class="stats">
+      <div *ngFor="let stat of stats" class="stat">
+        <dd>{{ stat.value | translate }}</dd>
+        <dt>{{ stat.label | translate }}</dt>
+      </div>
+    </dl>
+
+    <p class="summary">{{ 'BIDEX.SUMMARY' | translate }}</p>
+
+    <div class="techs">
+      <span *ngFor="let tech of techs" class="tech-pill" [ngStyle]="{'background-color': tech.color}">
+        {{ tech.name }}
+      </span>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary-btn" routerLink="/projects/bidex">{{ 'BIDEX.SEE_DETAILS' | translate }}</a>
+      <a class="btn secondary-btn" [href]="webUrl" target="_blank" rel="noopener noreferrer">{{ 'BIDEX.VISIT_WEB' | translate }}</a>
+      <a class="play-badge" [href]="playUrl" target="_blank" rel="noopener noreferrer">
+        <img [src]="'BADGES.GOOGLE_PLAY_IMG' | translate" [alt]="'BADGES.GOOGLE_PLAY_ALT' | translate" />
+      </a>
+    </div>
+  </div>
+</article>

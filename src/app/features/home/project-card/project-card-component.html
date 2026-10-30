@@ -13,11 +13,7 @@
     <div class="project-footer">
       <div class="footer-left">
         <a *ngIf="project.googlePlayUrl" [href]="project.googlePlayUrl" target="_blank" rel="noopener noreferrer" class="gplay-badge">
-          <img src="icons/for_projects/googleplay.svg" alt="Google Play" class="gplay-badge-icon" />
-          <span class="gplay-badge-text">
-            <small>{{ 'BADGES.AVAILABLE_ON' | translate }}</small>
-            {{ 'BADGES.GOOGLE_PLAY' | translate }}
-          </span>
+          <img [src]="'BADGES.GOOGLE_PLAY_IMG' | translate" [alt]="'BADGES.GOOGLE_PLAY_ALT' | translate" />
         </a>
 
         <a *ngIf="project.steamUrl" [href]="project.steamUrl" target="_blank" rel="noopener noreferrer" class="steam-badge">

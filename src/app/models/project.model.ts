@@ -57,4 +57,5 @@ export const TECHS: Record<string, Tech> = {
   docker: { name: 'Docker', color: '#2496ed' },
   sqlite: { name: 'SQLite', color: '#4479A1'},
   supabase: { name: 'Supabase', color: '#126016'},
+  cloudflare: { name: 'Cloudflare R2', color: '#c8650f'},
 };

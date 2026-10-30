@@ -44,7 +44,8 @@ export class AboutComponent {
     );
 
     observer.observe(this.contactBtn.nativeElement);
-    this.newView();
+    // Aviso por email de cada visita desactivado para evitar spam
+    // this.newView();
   }
 
   openContact() {

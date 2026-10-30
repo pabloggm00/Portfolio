@@ -1,0 +1,86 @@
+<main class="case">
+  <a class="back-link" routerLink="/">← {{ 'BIDEX_CASE.BACK' | translate }}</a>
+
+  <header class="case-header">
+    <img src="screenshots/003_bidex/1.webp" alt="" class="logo" />
+    <div>
+      <span class="eyebrow">{{ 'BIDEX_CASE.EYEBROW' | translate }}</span>
+      <h1>BiDex</h1>
+      <p class="subtitle">{{ 'BIDEX_CASE.SUBTITLE' | translate }}</p>
+    </div>
+  </header>
+
+  <p class="intro">{{ 'BIDEX_CASE.INTRO' | translate }}</p>
+
+  <div class="case-layout">
+    <nav class="case-index" [attr.aria-label]="'BIDEX_CASE.INDEX' | translate">
+      <span>{{ 'BIDEX_CASE.INDEX' | translate }}</span>
+      <button *ngFor="let item of index" (click)="scrollTo(item.id)">{{ item.title | translate }}</button>
+    </nav>
+
+    <div class="case-content">
+      <section id="overview" class="block-panel">
+        <h2>{{ 'BIDEX_CASE.OVERVIEW.TITLE' | translate }}</h2>
+        <p>{{ 'BIDEX_CASE.OVERVIEW.TEXT' | translate }}</p>
+
+        <div *ngFor="let flow of flows" class="flow">
+          <h3>{{ 'BIDEX_CASE.OVERVIEW.' + flow.title | translate }}</h3>
+          <ol>
+            <li *ngFor="let step of flow.steps">{{ 'BIDEX_CASE.OVERVIEW.' + step | translate }}</li>
+          </ol>
+        </div>
+
+        <p>{{ 'BIDEX_CASE.OVERVIEW.NOTE' | translate }}</p>
+      </section>
+
+      <section id="features" class="block-panel">
+        <h2>{{ 'BIDEX_CASE.FEATURES.TITLE' | translate }}</h2>
+        <div class="feature-grid">
+          <article *ngFor="let feature of features; let i = index" class="feature">
+            <button class="shot" (click)="open(featureImages, i)" [attr.aria-label]="'BIDEX_CASE.ENLARGE' | translate">
+              <img [src]="feature.image" [alt]="'BIDEX_CASE.FEATURES.' + feature.key + '_T' | translate" loading="lazy" />
+            </button>
+            <h3>{{ 'BIDEX_CASE.FEATURES.' + feature.key + '_T' | translate }}</h3>
+            <p>{{ 'BIDEX_CASE.FEATURES.' + feature.key | translate }}</p>
+          </article>
+        </div>
+      </section>
+
+      <section *ngFor="let section of sections" [id]="section.id" class="block-panel">
+        <h2>{{ 'BIDEX_CASE.' + section.key + '.TITLE' | translate }}</h2>
+
+        <div class="section-body">
+          <div class="section-text">
+            <h3>{{ 'BIDEX_CASE.PROBLEM' | translate }}</h3>
+            <p>{{ 'BIDEX_CASE.' + section.key + '.PROBLEM' | translate }}</p>
+
+            <h3>{{ 'BIDEX_CASE.SOLUTION' | translate }}</h3>
+            <p>{{ 'BIDEX_CASE.' + section.key + '.SOLUTION' | translate }}</p>
+            <ul>
+              <li *ngFor="let point of section.points">{{ 'BIDEX_CASE.' + section.key + '.' + point | translate }}</li>
+            </ul>
+
+            <h3>{{ 'BIDEX_CASE.RESULT' | translate }}</h3>
+            <p>{{ 'BIDEX_CASE.' + section.key + '.RESULT' | translate }}</p>
+          </div>
+
+          <div class="section-shots">
+            <button *ngFor="let image of section.images; let i = index" class="shot"
+              (click)="open(section.images, i)" [attr.aria-label]="'BIDEX_CASE.ENLARGE' | translate">
+              <img [src]="image" [alt]="'BIDEX_CASE.' + section.key + '.TITLE' | translate" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="web" class="block-panel">
+        <h2>{{ 'BIDEX_CASE.WEB.TITLE' | translate }}</h2>
+        <p>{{ 'BIDEX_CASE.WEB.TEXT' | translate }}</p>
+        <button class="web-shot" (click)="open(['screenshots/003_bidex_web/1.webp'])" [attr.aria-label]="'BIDEX_CASE.ENLARGE' | translate">
+          <img src="screenshots/003_bidex_web/1.webp" [alt]="'BIDEX_CASE.WEB.TITLE' | translate" loading="lazy" />
+        </button>
+      </section>
+
+    </div>
+  </div>
+</main>

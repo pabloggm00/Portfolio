@@ -8,6 +8,7 @@ import { BidexPrivacy } from './features/privacy-policies/bidex-privacy/bidex-pr
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'aboutme', component: AboutMeComponent },
+    { path: 'projects/bidex', loadComponent: () => import('./features/bidex-case/bidex-case').then(m => m.BidexCaseComponent) },
     { path: 'privacy-policy/keepit', component: KeepitPrivacy },
     { path: 'privacy-policy/bidex', component: BidexPrivacy},
     { path: '**', component: NotFoundComponent }

@@ -19,6 +19,7 @@
     [class.fade-out]="!showGrid()">
 
     <ng-container *ngIf="activeCategory() === 'featured'">
+      <app-bidex-spotlight></app-bidex-spotlight>
       <app-featured-card
         *ngFor="let project of activeProjects"
         [project]="project"

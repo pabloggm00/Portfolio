@@ -2,6 +2,7 @@ import { Component, ElementRef, NgZone, QueryList, signal, ViewChild, ViewChildr
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from '../project-card/project-card-component';
 import { FeaturedCardComponent } from '../featured-card/featured-card-component';
+import { BIDEX_PLAY_URL, BIDEX_WEB_URL, BidexSpotlightComponent } from '../bidex-spotlight/bidex-spotlight-component';
 import gsap from 'gsap';
 import { Project, ProjectCategory, STATES, TECHS } from '../../../models/project.model';
 import { TranslatePipe } from '../../../core/translate.pipe';
@@ -9,7 +10,7 @@ import { TranslationService } from '../../../core/translation.service';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, ProjectCardComponent, FeaturedCardComponent, TranslatePipe],
+  imports: [CommonModule, ProjectCardComponent, FeaturedCardComponent, BidexSpotlightComponent, TranslatePipe],
   templateUrl: './projects-component.html',
   styleUrls: ['./projects-component.scss']
 })
@@ -55,19 +56,13 @@ export class ProjectsComponent {
       {
         title: 'BiDex App',
         description: t('PROJECT_DESCRIPTIONS.BIDEX'),
-        image: 'screenshots/003_bidex/1.webp',
-        techs: [TECHS['flutter'], TECHS['dart'], TECHS['supabase'], TECHS['postgresql']],
+        image: 'screenshots/003_bidex/app-1.webp',
+        techs: [TECHS['flutter'], TECHS['dart'], TECHS['sqlite'], TECHS['supabase'], TECHS['postgresql']],
         state: STATES['published'],
         icons: [],
-        googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.pabnauts.bidex&pcampaignid=web_share',
+        googlePlayUrl: BIDEX_PLAY_URL,
         isWebApp: true,
-        categories: ['featured', 'app'],
-        featuredImages: [
-          'screenshots/003_bidex/1.webp',
-          'screenshots/003_bidex/2.webp',
-          'screenshots/003_bidex/3.webp',
-          // 'screenshots/003_bidex/4.webp',
-        ]
+        categories: ['app']
       },
       {
         title: 'BiDex Web',
@@ -76,15 +71,10 @@ export class ProjectsComponent {
         techs: [TECHS['angular'], TECHS['typescript'], TECHS['scss'], TECHS['supabase'], TECHS['postgresql']],
         state: STATES['published'],
         icons: [
-          { name: 'Web', url: 'https://bidex.app', iconSrc: 'icons/for_projects/web.svg' },
+          { name: 'Web', url: BIDEX_WEB_URL, iconSrc: 'icons/for_projects/web.svg' },
         ],
         isWebApp: true,
-        categories: ['featured', 'web'],
-        featuredImages: [
-          'screenshots/003_bidex_web/1.webp',
-          'screenshots/003_bidex_web/2.webp',
-          'screenshots/003_bidex_web/3.webp',
-        ]
+        categories: ['web']
       },
       {
         title: 'Pokemon Card Collector',
@@ -112,10 +102,7 @@ export class ProjectsComponent {
         state: STATES['published'],
         steamUrl: 'https://store.steampowered.com/app/2392660/Mencia_A_never_was_tale/',
         isWebApp: false,
-        categories: ['featured', 'game'],
-        featuredImages: [
-          'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2392660/header.jpg?t=1688542658',
-        ]
+        categories: ['game']
       },
       {
         title: 'Portfolio',
